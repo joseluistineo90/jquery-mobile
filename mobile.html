@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejemplo de Website con jQuery Mobile</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="js/modernizr.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-theme="a" id="inicio">
+
+            <header data-role="header" data-theme="a">
+                <img src="img/home-logo.png" id="topHeader"/>
+                <h1>HTML5 con jQM</h1>  
+            </header>
+            <section data-role="content">   
+                <nav data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="mobile.html" data-icon="home" rel="external">Inicio</a></li>
+                        <li><a href="css3.html" data-icon="check" rel="external">CSS3</a></li>
+                        <li><a href="multimedia.html" data-icon="grid" rel="external">Multimedia</a></li>
+                        <!-- Tag  rel="external" forza en los navegadores que tienen soporte Tipo B o Tipo C -->
+                    </ul>
+                    <ul>
+                        <li><a href="offline.html" data-icon="gear" rel="external">Offline</a></li>
+                        <li><a href="semantica.html" data-icon="star" rel="external">Semantica</a></li>
+                        <li><a href="graficos.html" data-icon="grid"rel="external">Gráficos</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <footer data-role="footer">
+                <nav data-role="navbar" data-iconpos="bottom">
+                    <ul>
+                        <li><a href="#email" data-icon="info" rel="popup">Contáctanos</a></li>
+                    </ul>
+                </nav>
+                <h4>Desarrollado por AA</h4>
+            </footer>
+
+        </div>
+
+        <div data-role="popup" id="email">
+            <header data-role="header" data-theme="a">
+                <h1>Contáctanos</h1>
+                <a href="#inicio" data-icon="arrow-l">Inicio</a>  
+            </header>
+            <div data-role="content">
+           		<form action="enviar.php" method="post" data-ajax="false">
+           			<label for="nombre">Nombre</label>
+            		<input type="text" id="nombre" name="nombre" required>
+        
+                    <label for="email">Email</label>
+            		<input type="email" id="email" name="email" required>
+
+           			<label for="mensaje">Comentarios</label>
+            		<textarea id="mensaje" name="mensaje" required></textarea>
+
+           		    <input type="submit" value="Enviar" />
+                </form>
+            </div>
+	    </div>
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery-migrate-1.1.0.min.js"></script>
+    <script src="js/micodigojqm.js"></script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.2.0.css" />
+    <link rel="stylesheet" href="css/jquery.mobile-1.2.0.css" />
+    <link rel="stylesheet" href="css/miTema.css" />
+    <link rel="stylesheet" href="css/miEstilo.css" />
+</body>
+</html>

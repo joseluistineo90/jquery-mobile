@@ -1,0 +1,56 @@
+Temas Video-Tutoría 16/02/2013:
+
+	1. Fundamentos de jQuery Mobile
+
+		* Estructura Inicial
+
+		* Tag <meta> viewport:
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		* Atributos Data: data-[nombre del atributo]=""
+			- Usados para almacenar información en el lado cliente, que deseamos sea recuperada desde el JavaScript, de forma fácil, ágil y sin generar peticiones adicionales al servidor.
+
+			- Soportados en todos los navegadores desde IE6.
+
+			- Iniciaron como una técnica de "hacks" con malas prácticas como el uso de rel="" o class="" para almacenar datos en lado cliente que serían recuperados por el script de una web-app o de un website.
+
+			- Ejemplo:
+			En HTML: <span data-ciudad="Barranquilla"></span>
+
+			En JS (sin jQuery): user.getAttribute('data-ciudad');
+
+			En JS con jQuery: user.data('ciudad');
+
+	2. Atributos data- de jQuery Mobile:
+		* Páginas y Divisiones de Página: 
+			- data-role="page"
+			- data-role="header"
+			- data-role="content"
+			- data-role="footer"
+
+		* Títulos de Página:
+			- data-title="Tútulo de la Página"
+
+		* Botones de Navegación y Formularios:
+			- data-role="button"
+			- data-corners		true | false
+			- data-icon			home | delete | plus | arrow-u | arrow-d | check | gear | grid | star | custom | arrow-r | arrow-l | minus | refresh | forward | back | alert | info | search
+			- data-iconpos		left | right | top | bottom | notext
+			- data-iconshadow	true | false
+			- data-inline		true | false
+			- data-mini 		true | false - Compact sized version
+			- data-shadow		true | false
+			- data-theme		swatch letter (a-z)
+
+			- <input type="submit" value="Enviar" />
+			- <input type="reset" value="Limpiar Campos" />
+			- <input type="button" value="Botón Genérico" />
+			- <button>Botón Genérico</button>
+			- <a href="#" data-role="button" data-icon="refresh" data-iconpos="left" data-iconshadow="true" data-shadow="true" data-theme="a">Botón Recomendado</a>
+
+		* Checkboxes:
+			- data-mini			true | false - Compact sized version
+			- data-role			none - Prevents auto-enhancement to use native control
+			- data-theme		swatch letter (a-z) - Added to the form element
+
+	3. Direccionamiento con JavaScript
